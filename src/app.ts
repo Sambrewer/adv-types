@@ -30,11 +30,20 @@ function add(a: Combinable, b: Combinable) {
     return a + b;
 }
 
-const result = add('Samuel', 'Brewer');
+const result = add('Samuel', ' Brewer');
+result.split(' ');
 
-type UnknownEmplyee = Employee | Admin;
+const fetchedUserData = {
+    id: 'u1',
+    name: 'Samuel',
+    job: { title: 'CEO', description: 'My own company' },
+};
 
-function printEmployeeInformation(emp: UnknownEmplyee) {
+console.log(fetchedUserData?.job?.title);
+
+type UnknownEmployee = Employee | Admin;
+
+function printEmployeeInformation(emp: UnknownEmployee) {
     console.log('Name: ' + emp.name);
     if ('privileges' in emp) {
         console.log('Privileges: ' + emp.privileges);
