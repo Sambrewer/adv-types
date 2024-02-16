@@ -104,8 +104,14 @@ moveAnimal({ type: 'bird', flyingSpeed: 10 });
 // const userInputElement = document.getElementById(
 //     'user-input'
 // )! as HTMLInputElement;
+
 const userInputElement = document.getElementById('user-input');
 
 if (userInputElement) {
     (userInputElement as HTMLInputElement).value = 'Hi there!';
+}
+
+interface ErrorContainer {
+    // { email: 'Not a valid email, username: 'Must start with a character' }
+    [prop: string]: string;
 }
