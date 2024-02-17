@@ -111,7 +111,7 @@ function moveAnimal(animal: Animal) {
             speed = animal.runningSpeed;
             break;
     }
-    console.log('Mobing at speed: ' + speed);
+    console.log('Moving at speed: ' + speed);
 }
 
 moveAnimal({ type: 'bird', flyingSpeed: 10 });
